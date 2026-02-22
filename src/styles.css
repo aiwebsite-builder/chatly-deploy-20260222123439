@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-[#3D3D3D] antialiased;
+  }
+}
+
+/* Custom class for button hover animation */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 ease-out rounded-xl overflow-hidden group bg-[#1A3A2A] hover:bg-opacity-90;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 58, 42, 0.2);
+}
+
+.btn-secondary {
+  @apply relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold border border-[#1A3A2A] text-[#1A3A2A] transition-all duration-300 ease-out rounded-xl overflow-hidden group hover:bg-[#1A3A2A] hover:text-white;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(26, 58, 42, 0.1);
+}
+
+/* Subtle pattern for background depth */
+.bg-pattern {
+  background-image: radial-gradient(#e0dbd3 1px, transparent 1px);
+  background-size: 20px 20px;
+}
